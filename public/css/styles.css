@@ -1,0 +1,102 @@
+body {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 650px;
+	margin: 0 auto;
+	padding: 0 16px;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	background-image: linear-gradient(#fff, slateblue);
+}
+
+.main-content {
+	flex-grow: 1;
+}
+
+footer {
+	color: #c3b8b8;
+	border-top: 1px solid #eeeeee;
+	margin-top: 16px;
+	font-size: 24px;
+	padding: 16px 0;
+}
+
+header {
+	margin-top: 16px;
+	margin-bottom: 48px;
+}
+
+h1 {
+	font-size: 64px;
+	margin-bottom: 16px;
+	color: slateblue;
+}
+
+header a {
+	margin-right: 16px;
+	cursor: pointer;
+	text-decoration: none;
+	border: 2px solid slateblue;
+	border-radius: 4px;
+	padding: 8px;
+	background: transparent;
+	position: relative;
+}
+/*slateblue*/
+
+a > span {
+	background: linear-gradient(45deg, #fff 50%, slateblue 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+a:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(45deg, slateblue 50%, transparent 50%);
+	z-index: -1;
+}
+
+a > span,
+a:after {
+	background-size: 300%;
+	background-position: 100%;
+	transition: 1s, font-size 0.2s;
+}
+
+a:hover > span,
+a:hover:after {
+	background-position: 0;
+	font-size: 1.1em;
+
+	color: #fff;
+	/*For IE*/
+}
+
+.portrait {
+	width: 250px;
+}
+
+input {
+	border: 1px solid #cccccc;
+	padding: 8px;
+}
+
+button {
+	cursor: pointer;
+	border: 1px solid #888888;
+	background: #888888;
+	color: white;
+	padding: 8px;
+}
+
+/* background-color: blueviolet; */
+/* margin: 16px; add spaces outside the element */
+/* padding: 16px; add spaces inside the element */
