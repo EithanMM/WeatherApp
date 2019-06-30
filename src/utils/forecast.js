@@ -15,6 +15,10 @@ const forecast = (latitude, longitude, callback) => {
 				body.daily.data[0].summary +
 					' It is currently ' +
 					body.currently.temperature +
+					' Celsius degree out. With a minimal temperature of ' +
+					body.daily.data[0].temperatureMin +
+					' Celsius degree and a maximal temperature of ' +
+					body.daily.data[0].temperatureMax +
 					' Celsius degree out. There is a ' +
 					body.currently.precipProbability +
 					'% chance of rain.'
