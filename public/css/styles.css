@@ -97,6 +97,11 @@ button {
 	padding: 8px;
 }
 
+.map {
+	height: 400px;
+	width: 100%;
+}
+
 /* background-color: blueviolet; */
 /* margin: 16px; add spaces outside the element */
 /* padding: 16px; add spaces inside the element */

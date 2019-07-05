@@ -10,19 +10,14 @@ const forecast = (latitude, longitude, callback) => {
 		} else if (body.error) {
 			callback('Unable to find location.', undefined);
 		} else {
-			callback(
-				undefined,
-				body.daily.data[0].summary +
-					' It is currently ' +
-					body.currently.temperature +
-					' Celsius degree out. With a minimal temperature of ' +
-					body.daily.data[0].temperatureLow +
-					' Celsius degree and a maximal temperature of ' +
-					body.daily.data[0].temperatureHigh +
-					' Celsius degree out. There is a ' +
-					body.currently.precipProbability +
-					'% chance of rain.'
-			);
+			callback(undefined, {
+				summary: body.daily.data[0].summary,
+				temperature: body.currently.temperature,
+				minTemperature: body.daily.data[0].temperatureLow,
+				maxTemperature: body.daily.data[0].temperatureHigh,
+				precipProbability: body.currently.precipProbability,
+				hourlyForecast: body.hourly.data.slice(0, 13)
+			});
 		}
 	});
 };

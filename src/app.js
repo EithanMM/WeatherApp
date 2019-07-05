@@ -44,6 +44,7 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
+	//Obtengo los parametros asignados al url, en este caso 'address'.
 	if (!req.query.address) {
 		return res.send({ errorMessage: 'Address must be provided!' });
 	}
@@ -64,11 +65,6 @@ app.get('/weather', (req, res) => {
 			});
 		});
 	});
-
-	// res.send({
-	// 	forecast: 'Sunny all day',
-	// 	address: req.query.address
-	// });
 });
 
 //CREATE AN ENDPOINT URL
